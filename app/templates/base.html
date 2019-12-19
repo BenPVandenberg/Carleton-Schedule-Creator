@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en-US">
+    <head>
+        <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+        <link rel="stylesheet" id="ample-style-css" href="{% static 'style.css' %}" type="text/css" media="all">
+        <meta charset="utf-8">
+        <meta name="Copyright" content="Ben Vandenberg">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <div id='menu' class="top">
+            <img src="{% static "images/CU_logo_white.png" %}" alt="Carleton University Logo"  style="display: flex;margin-left: auto;margin-right: auto; width: 25%;padding-top: 10px;">
+{#            <ul>#}
+{#              <li><a href="{% url 'index' %}">Home</a></li>#}
+{#              <li><a href="{% url 'inputPage' %}">Schedule Generator</a></li>#}
+{#            </ul>#}
+        </div>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
